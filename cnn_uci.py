@@ -77,6 +77,7 @@ fa = open("data_processing/uci_data/answers_test.csv")
 labels_test = np.loadtxt(fname = fa, delimiter = ',')
 fa.close()
 
+# z-score normalization
 features = features - np.mean(features, axis = 0)
 features = features / np.std(features, axis = 0)
 
